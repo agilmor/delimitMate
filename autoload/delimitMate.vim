@@ -482,7 +482,7 @@ function! delimitMate#ExpandReturn() "{{{
         \ && (   is_empty_matchpair
         \     || expand_right_matchpair
         \     || expand_inside_quotes)
-    let val = "\<Esc>a"
+    let val = "\<Esc>\<Left>a"
     if is_empty_matchpair && s:get('insert_eol_marker') == 2
           \ && !search(escape(s:get('eol_marker'), '[]\.*^$').'$', 'cnW', '.')
       let tail = getline('.')[col('.') - 1 : ]
